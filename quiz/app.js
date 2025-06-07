@@ -40,33 +40,27 @@ let qpara = document.getElementById("q");
 let apara = document.querySelectorAll(".options");
 let next = document.querySelector("#next");
 let container = document.querySelector("#container");
-let i = 0;
 
-let currentQ;
+let i = 0;
 let score;
 let answered;
 function startQuiz() {
   i = 0;
   score = 0;
-  answered = [false, false, false, false, false];
 }
-startQuiz();
+
 display(i);
 function display(i) {
   qpara.innerText = questions[i].question;
   for (let j = 0; j < 4; j++) {
     apara[j].innerText = `${j + 1}.${questions[i].options[j]}`;
     apara[j].style.backgroundColor = "";
+    apara[j].classList.remove("disabled");
   }
 }
 
 for (let k = 0; k < 4; k++) {
-  apara[k].addEventListener("click", function () {
-    if (answered[i] == true) {
-      for (let l = 0; l < 4; l++) {
-        apara[l].style.cursor = "not-allowed";
-      }
-    }
+  apara[k].addEventListener("click", function (event) {
     if (k === questions[i].correctInd) {
       apara[k].style.backgroundColor = "rgba(0,255,0,0.5)";
       score += 1;
@@ -75,7 +69,9 @@ for (let k = 0; k < 4; k++) {
         "rgba(0,255,0,0.5)";
       apara[k].style.backgroundColor = "rgb(255, 0, 0, 0.5)";
     }
-    answered[i] = true;
+    for (let m = 0; m < 4; m++) {
+      apara[m].classList.add("disabled");
+    }
   });
 }
 
@@ -100,3 +96,4 @@ next.addEventListener("click", function (event) {
     display(i);
   }
 });
+startQuiz();

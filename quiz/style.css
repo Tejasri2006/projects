@@ -121,3 +121,7 @@ body {
   background-repeat: no-repeat;
   background-position: center;
 }
+
+.disabled {
+  pointer-events: none;
+}
