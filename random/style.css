@@ -1,0 +1,68 @@
+body {
+  height: 100vh;
+  width: 100vw;
+  background-image: url("security1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+#container {
+  height: 30%;
+  width: 60%;
+  background-color: transparent;
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+#upper {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+#lower {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: center;
+}
+
+#generator {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+#generator .btn {
+  font-size: 1.2rem;
+  margin: 0rem 0.6rem 0rem;
+  border-radius: 2rem;
+  padding: 0.3rem;
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+#generator #content {
+  font-size: 1.5rem;
+  margin: 0rem 0.6rem 0rem;
+  border-radius: 2rem;
+}
+
+#box {
+  font-size: 1.5rem;
+}
+
+#box #display {
+  font-size: 2rem;
+}
