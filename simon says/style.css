@@ -1,0 +1,61 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  text-align: center;
+  background-image: url("collage.jpg");
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #e50914;
+}
+h1 {
+  margin: 0px;
+}
+.overlay {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.btn {
+  height: 200px;
+  width: 200px;
+  border-radius: 20%;
+  border: 2px solid #f5f5f1;
+  margin: 2.5rem;
+  color: black;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+}
+
+.red {
+  background-color: #d95980;
+}
+
+.yellow {
+  background-color: #f99b45;
+}
+
+.green {
+  background-color: #47e5bc;
+}
+
+.purple {
+  background-color: #819ff9;
+}
+
+.flash {
+  background-color: white;
+}
+
+.end {
+  background-color: red;
+}
