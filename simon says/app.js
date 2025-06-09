@@ -9,7 +9,7 @@ highest.classList.add("high");
 let started = false;
 let level = 0;
 let score = 0;
-let highestScore = 0;
+let highestScore = localStorage.getItem("highestScore") || 0;
 highest.innerText = `Highest Score: ${highestScore}`;
 text.append(highest);
 document.addEventListener("keypress", function () {
@@ -55,6 +55,7 @@ for (btn of divs) {
       score++;
       if (score > highestScore) {
         highestScore = score;
+        localStorage.setItem("highestScore", highestScore);
         highest.innerText = `Highest Score: ${highestScore}`;
         text.append(highest);
       }
