@@ -2,16 +2,19 @@ html,
 body {
   margin: 0;
   padding: 0;
-  height: 100%;
-  overflow: hidden;
+  min-height: 100vh;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 body {
+  min-height: 100vh;
   text-align: center;
   background-image: url("collage.jpg");
   background-size: cover;
   background-color: rgba(0, 0, 0, 0.6);
   color: #e50914;
+  position: relative;
 }
 h1 {
   margin: 0px;
@@ -58,4 +61,8 @@ h1 {
 
 .end {
   background-color: red;
+}
+
+.high {
+  margin: 0px;
 }
