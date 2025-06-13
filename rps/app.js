@@ -7,7 +7,6 @@ let result = document.querySelector("#result");
 let reload = document.querySelector("#reload");
 let userChoice,
   comChoice,
-  level = 0,
   userScore = 0,
   comScore = 0;
 
@@ -16,7 +15,6 @@ let choices = ["rock", "paper", "scissors"];
 
 function startGame() {
   levelUp();
-  h2.innerText = `Level ${level}`;
 }
 
 elements.addEventListener("click", function (event) {
@@ -50,8 +48,6 @@ elements.addEventListener("click", function (event) {
 });
 
 function levelUp() {
-  level++;
-  // h2.innerText = `Level ${level}`;
   comChoice = choices[Math.floor(Math.random() * 3)];
 }
 
