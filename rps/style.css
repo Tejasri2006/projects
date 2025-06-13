@@ -1,0 +1,105 @@
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: #a9b8c8;
+}
+
+#container {
+  height: 80%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-content: space-evenly;
+}
+
+#title {
+  height: 10%;
+  width: 100%;
+  text-align: center;
+  font-size: 1.5rem;
+  font-family: "Luckiest Guy", cursive;
+  font-weight: 200;
+  font-style: normal;
+}
+.elements {
+  height: 90%;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.rock,
+.paper,
+.scissors {
+  height: 70%;
+  width: 30%;
+  border: 2px solid black;
+  border-radius: 8px;
+}
+
+.rock {
+  background-image: url("rock.png");
+  background-size: cover;
+}
+
+.paper {
+  background-image: url("paper.png");
+  background-size: cover;
+}
+
+.scissors {
+  background-image: url("scissors.png");
+  background-size: cover;
+}
+
+.clicked:hover {
+  box-shadow: 5px 5px 10px white;
+}
+
+h1 {
+  margin: 0px;
+}
+
+h2 {
+  text-align: center;
+  font-family: "Luckiest Guy", cursive;
+  font-weight: 200;
+  font-style: normal;
+  margin: 0px;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  margin-top: 0.5rem;
+}
+
+.btn {
+  height: 10%;
+  width: 100%;
+  text-align: center;
+}
+
+#user,
+#robot,
+#reload {
+  height: 4rem;
+  width: 7rem;
+  border-radius: 1rem;
+  background-color: #103356;
+  color: white;
+  font-weight: 200px;
+  font-size: 1.2rem;
+  border: 2px solid white;
+}
+
+#user:hover,
+#robot:hover,
+#reload:hover {
+  box-shadow: 2px 2px 5px white;
+}
+
+.btn {
+  display: flex;
+  justify-content: space-evenly;
+}
