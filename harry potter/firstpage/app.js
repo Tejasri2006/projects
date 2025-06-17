@@ -10,15 +10,15 @@ list.addEventListener("click", () => {
 });
 
 movies.addEventListener("click", () => {
-  window.location.href = "../../secondpage/index.html";
+  window.location.href = "../secondpage/index.html";
 });
 
 home.addEventListener("click", () => {
-  window.location.href = "../../firstpage/index.html";
+  window.location.href = "../firstpage/index.html";
 });
 
 search.addEventListener("click", () => {
   if (input.value.toLowerCase() === "movies") {
-    window.location.href = "../../secondpage/index.html";
+    window.location.href = "../secondpage/index.html";
   }
 });
