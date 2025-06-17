@@ -10,15 +10,15 @@ list.addEventListener("click", () => {
 });
 
 movies.addEventListener("click", () => {
-  window.location.href = "projects/harry%20potter/secondpage/index.html";
+  window.location.href = "/projects/harry%20potter/secondpage/index.html";
 });
 
 home.addEventListener("click", () => {
-  window.location.href = "projects/harry%20potter/secondpage/index.html";
+  window.location.href = "/projects/harry%20potter/secondpage/index.html";
 });
 
 search.addEventListener("click", () => {
   if (input.value.toLowerCase() === "movies") {
-    window.location.href = "projects/harry%20potter/secondpage/index.html";
+    window.location.href = "/projects/harry%20potter/secondpage/index.html";
   }
 });
