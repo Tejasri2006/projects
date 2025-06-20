@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/style1.css" rel="stylesheet" />
+    <title>Home</title>
+  </head>
+  <body>
+    <h1>Threads</h1>
+    <div id="container">
+      <%for(post of posts) {%>
+      <div id="post">
+        <div class="image"><img src="<%=post.image%>" /></div>
+        <div class="content">
+          <h3>Id:<%=post.id%></h3>
+          <h4>Username:@<%=post.username%></h4>
+          <h4>Email:<%=post.email%></h4>
+          <p>Content:<%=post.content %></p>
+          <div class="btn">
+            <form method="get" action="/posts/<%=post.id%>/edit">
+              <button>Edit post</button>
+            </form>
+            <form method="post" action="/posts/<%=post.id%>?_method=DELETE">
+              <button>Delete post</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <%}%>
+    </div>
+    <div>
+      <form method="get" action="http://localhost:8080/posts/new">
+        <button class="btn">Create new post</button>
+      </form>
+    </div>
+  </body>
+</html>

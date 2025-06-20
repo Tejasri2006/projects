@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/style3.css" rel="stylesheet" />
+    <title>Edit your post</title>
+  </head>
+  <body>
+    <div id="post">
+      <h2>Edit your post</h2>
+      <form method="POST" action="/posts/<%=post.id%>?_method=PATCH">
+        <div class="image"><img src="<%=post.image%>" /></div>
+        <div class="content">
+          <label for="username">Username:</label>
+          <input
+            readonly
+            type="text"
+            placeholder="enter your username"
+            name="username"
+            id="username"
+            value="<%=post.username%>"
+          />
+        </div>
+        <br />
+        <div class="content">
+          <label for="email">Email:</label>
+          <input
+            readonly
+            type="email"
+            placeholder="enter your email"
+            name="email"
+            id="email"
+            value="<%=post.email%>"
+          />
+        </div>
+        <br />
+        <div class="content">
+          <label for="content">Content:</label>
+          <textarea
+            id="content"
+            name="content"
+            placeholder="Add post content..."
+            rows="7"
+            cols="10"
+          >
+<%=post.content%></textarea
+          >
+        </div>
+        <div class="btn"><button>Edit!</button></div>
+      </form>
+    </div>
+  </body>
+</html>
