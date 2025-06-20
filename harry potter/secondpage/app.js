@@ -95,3 +95,8 @@ select.addEventListener("change", async function (event) {
     }
   }
 });
+
+let arrow = document.querySelector("#arrow");
+arrow.addEventListener("click",() => {
+window.location.pathname = "/projects/harry%20potter/firstpage";
+});
