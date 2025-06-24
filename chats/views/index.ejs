@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="/style.css" rel="stylesheet" />
+    <title>Mini Whatsapp</title>
+  </head>
+  <body>
+    <h3 style="text-align: center">All Chats</h3>
+    <div id="container">
+      <% for(chat of chats) {%>
+      <div class="chat">
+        <p>From:<i><%=chat.from%></i></p>
+        <div class="msg"><p><%=chat.msg%></p></div>
+        <p>Received By:<i><%=chat.to%></i></p>
+        <p>Sent at:<%=chat.created_at.toString().split(" ")[4]%></p>
+        <p>
+          Sent on:<%=chat.created_at.toString().split(" ").slice(0,4).join("")%>
+        </p>
+        <form
+          method="get"
+          action="/chats/<%=chat._id%>/edit"
+          style="display: inline-block"
+        >
+          <button class="btn">Edit message</button>
+        </form>
+        <form
+          method="post"
+          action="/chats/<%=chat._id%>?_method=DELETE"
+          style="display: inline-block"
+        >
+          <button class="delete btn">Delete Chat</button>
+        </form>
+      </div>
+      <% }%>
+    </div>
+    <form method="get" action="/chats/new">
+      <button id="add" class="btn">Add a new chat</button>
+    </form>
+    <script src="/app.js"></script>
+  </body>
+</html>

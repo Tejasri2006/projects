@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background-color: aliceblue;
+        text-align: center;
+      }
+      #container {
+        background-color: cornflowerblue;
+        color: white;
+        width: 20rem;
+        margin: 0px auto;
+        border-radius: 5px;
+        box-shadow: 3px 3px 9px black;
+      }
+      button {
+        padding: 3px;
+        background-color: aliceblue;
+        border: none;
+        margin-bottom: 5px;
+        font-family: "Montserrat", sans-serif;
+        font-optical-sizing: auto;
+      }
+    </style>
+    <title>New Chat</title>
+  </head>
+  <body>
+    <div id="container">
+      <h2>Send a message</h2>
+      <form action="/chats" method="post">
+        <label for="from">Message By:</label>
+        <input
+          type="text"
+          name="from"
+          id="from"
+          placeholder="Who's is this?"
+          rows="2"
+          cols="5"
+        />
+        <br /><br /><br />
+        <label for="from">Message to:</label>
+        <input type="text" name="to" placeholder="To whom?" id="to" />
+        <br /><br /><br />
+        <label for="msg">Message:</label>
+        <textarea
+          name="msg"
+          placeholder="what's  your message?"
+          rows="10"
+          cols="20"
+          id="msg"
+        ></textarea>
+        <br /><br /><br />
+        <button>send message</button>
+      </form>
+    </div>
+  </body>
+</html>

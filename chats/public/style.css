@@ -1,0 +1,40 @@
+body {
+  margin-left: 20px;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  text-align: center;
+}
+.chat {
+  background-color: aliceblue;
+  padding: 20px;
+  border-radius: 16px;
+  display: inline-block;
+}
+
+.msg {
+  background-color: dodgerblue;
+  color: white;
+  padding: 2px 15px;
+  border-radius: 5px;
+}
+
+#container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: 20px 10px;
+}
+
+#add {
+  padding: 5px;
+  border-radius: 5px;
+  margin: 10px 0px;
+  border: 1px solid black;
+  background-color: aliceblue;
+}
+
+button {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+}

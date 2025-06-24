@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background-color: aliceblue;
+        text-align: center;
+        font-family: "Montserrat", sans-serif;
+        font-optical-sizing: auto;
+      }
+      #container {
+        background-color: cornflowerblue;
+        color: white;
+        width: 30rem;
+        margin: 0px auto;
+        border-radius: 5px;
+        box-shadow: 3px 3px 9px black;
+      }
+      button {
+        padding: 3px;
+        background-color: aliceblue;
+        border: none;
+        margin-bottom: 5px;
+        font-family: "Montserrat", sans-serif;
+        font-optical-sizing: auto;
+      }
+    </style>
+    <title>Edit your message</title>
+  </head>
+  <body>
+    <div id="container">
+      <h2>Edit your message</h2>
+      <h4>This chat was sent from <%=chat.from%> to <%=chat.to%></h4>
+      <form method="post" action="/chats/<%=chat._id%>/?_method=PATCH">
+        <textarea name="msg" rows="10" cols="50"><%=chat.msg%></textarea><br />
+        <button>Edit</button>
+      </form>
+    </div>
+  </body>
+</html>
